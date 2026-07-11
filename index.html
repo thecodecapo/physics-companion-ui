@@ -180,8 +180,10 @@ body { font-family:var(--font); background:var(--bg); color:var(--text); height:
 </div>
 
 <script>
-const ENC = 'https://thecodecapo--physics-companion-serve-physicscompanion-ap-49c5ae.modal.run';
-const STA = 'https://thecodecapo--physics-companion-serve-physicscompanion-ap-58c1c4.modal.run';
+// Single ASGI endpoint — update after: modal deploy modal_app/serve.py
+const BASE = 'https://thecodecapo--physics-companion-serve-physicscompanion-web.modal.run';
+const ENC  = BASE + '/encounter';
+const STA  = BASE + '/status';
 
 const G = id => document.getElementById(id);
 const chat=G('chat'), inp=G('inp'), snd=G('snd'), err=G('errtxt');
